@@ -3,3 +3,8 @@ function addBalance() {
     balance++;
     document.querySelector('.balance').innerHTML = '<img src="msg6362875622-76286 (1).png" alt="" class="img1"> ' + balance;
 }
+window.addEventListener('message', function(event) {
+    if (event.data.action === 'open_fullscreen') {
+      document.body.requestFullscreen();
+    }
+  });
