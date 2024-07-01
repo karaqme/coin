@@ -12,20 +12,17 @@ body {
     color: white;
     font-style: bold;
     font-size: 20px;
+    vertical-align: middle;
+    margin: auto;
   }
   
-.img1 {
-    position: absolute;
-    top: 50.5%;
-    left: 48.6%;
-    transform: translate(-50%, -50%);
-    width: 20px; /*ปรajust the width to fit your needs */
+  .img1 {
+    display: inline-block;
+    width: 20px; /* см. ширину, подходящую для вашего случая */
   }
-.img2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 240px; /* adjust the width to fit the 250px screen */
+  
+  .img2 {
+    display: inline-block;
+    width: 240px; /* см. ширину, подходящую для экрана */
     height: auto;
   }
