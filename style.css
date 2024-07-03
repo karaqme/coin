@@ -38,17 +38,16 @@ body {
 }
 
 .header {
-  width: 100%; /* make the footer full-width */
   background-color: #000000; /* adjust the background color to your liking */
   padding: 10px; /* add some padding for better looks */
   text-align: center; /* center the text horizontally */
-  
-  position: fixed; /* make it fixed at the bottom of the screen */
-  bottom: 0; /* position it at the bottom of the screen */
-  
   display: flex; /* add this to center vertically and horizontally */
-  justify-content: center; /* center it horizontally */
+  justify-content: space-between; /* center it horizontally */
   align-items: center; /* center it vertically */
+    position: absolute;
+    bottom: 0; /* position it at the bottom of the page */
+    left: 0; /* position it at the left edge of the page */
+    right: 0; /* position it at the right edge of the page */
 }
 
 a {
@@ -85,17 +84,22 @@ a {
   border-radius: 100% 100% 0% 0%;
 }
 .icon1 {
+  margin-left: 100px; /* add a margin to the left */
   font-size: 2.2em; /* set the font size to 2.5em */
   color: white; /* set the color to white */
-  transform: translate( -200%, -10%); /* fine-tune the positioning */
+  display: flex; /* Add this property to make the icons flexible */
+  justify-content: space-between; /* Distribute the icons evenly */
 }
 .icon2 {
   font-size: 1.5em;
   text-align: center;
-  transform: translate(0%, -10%); /* fine-tune the positioning */
+  display: flex; /* Add this property to make the icons flexible */
+  justify-content: space-between; /* Distribute the icons evenly */
 }
 .icon3 {
   margin-top: 8px;
   font-size: 1.5em;
-  transform: translate( 200%, -10%); /* fine-tune the positioning */
+  display: flex; /* Add this property to make the icons flexible */
+  justify-content: space-between; /* Distribute the icons evenly */
+  margin-right: 100px; /* add a margin to the right */
 }
