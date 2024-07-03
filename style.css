@@ -1,35 +1,99 @@
 body {
-    text-align: center;
-    background-color: rgb(66, 41, 41);
+  text-align: center;
+  background-color: rgb(66, 41, 41);
+  margin-left: 0;
 }
+
 .xd {
-    margin-bottom: 20px;
-    color: white;
+  margin-bottom: 20px;
+  color: white;
 }
+
 .balance {
-    position: relative; /* добавьте это, чтобы сделать контейнер относительным */
-    text-align: center;
-    color: white;
-    font-style: bold;
-    font-size: 20px;
-    vertical-align: middle;
-    margin: auto;
-    height: 40px; /* add a fixed height for .balance */
-  }
+  position: relative; /* добавьте это, чтобы сделать контейнер относительным */
+  text-align: center;
+  color: white;
+  font-style: bold;
+  font-size: 20px;
+  vertical-align: middle;
+  margin: auto;
+  height: 40px; /* add a fixed height for .balance */
+}
+
+.img1 {
+  display: inline-block;
+  width: 20px; /* см. ширину, подходящую для вашего случая */
+}
+
+.img2 {
+  display: block;
+  margin: 0 auto;
+  width: 240px; /* adjust the width to fit the screen */
+  height: auto;
+  max-width: 100%; /* make it responsive for mobile devices */
+  position: absolute; /* add this to make the element positionable */
+  left: 50%; /* center it horizontally */
+  top: 50%; /* center it vertically */
+  transform: translate(-50%, -50%); /* fine-tune the positioning */
+}
+
+.header {
+  width: 100%; /* make the footer full-width */
+  background-color: #000000; /* adjust the background color to your liking */
+  padding: 10px; /* add some padding for better looks */
+  text-align: center; /* center the text horizontally */
   
-  .img1 {
-    display: inline-block;
-    width: 20px; /* см. ширину, подходящую для вашего случая */
-  }
+  position: fixed; /* make it fixed at the bottom of the screen */
+  bottom: 0; /* position it at the bottom of the screen */
   
-  .img2 {
-    display: block;
-    margin: 0 auto;
-    width: 240px; /* adjust the width to fit the screen */
-    height: auto;
-    max-width: 100%; /* make it responsive for mobile devices */
-    position: absolute; /* add this to make the element positionable */
-    left: 50%; /* center it horizontally */
-    top: 50%; /* center it vertically */
-    transform: translate(-50%, -50%); /* fine-tune the positioning */
-  }
+  display: flex; /* add this to center vertically and horizontally */
+  justify-content: center; /* center it horizontally */
+  align-items: center; /* center it vertically */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#man {
+  display: inline-block;
+  position: relative;
+  width: 1em; /* increase the width of the icon */
+  height: 1em; /* increase the height of the icon */ 
+}
+
+#man::before,
+#man::after {
+  content: "";
+  position: absolute;
+  background: currentColor; /* color of the icon as the text color */ 
+}
+
+#man::before {
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+}
+
+#man::after {
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 40%;
+  border-radius: 100% 100% 0% 0%;
+}
+.icon1 {
+  font-size: 2.2em; /* set the font size to 2.5em */
+  color: white; /* set the color to white */
+  margin-right: 30px;
+}
+.icon2 {
+  font-size: 1.5em;
+}
+.icon3 {
+  margin-top: 8px;
+  font-size: 1.5em;
+  margin-left: 30px;
+}
