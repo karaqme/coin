@@ -88,6 +88,7 @@ a {
   color: white; /* set the color to white */
   display: flex; /* Add this property to make the icons flexible */
   justify-content: space-between; /* Distribute the icons evenly */
+  margin-left: 3%;
 }
 .icon2 {
   font-size: 1.5em;
@@ -100,6 +101,7 @@ a {
   font-size: 1.5em;
   display: flex; /* Add this property to make the icons flexible */
   justify-content: space-between; /* Distribute the icons evenly */
+  margin-right: 3%;
 }
 #home2 {
   display: none;
