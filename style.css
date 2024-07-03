@@ -84,7 +84,7 @@ a {
   border-radius: 100% 100% 0% 0%;
 }
 .icon1 {
-  margin-left: 100px; /* add a margin to the left */
+  margin-left: 20px; /* add a margin to the left */
   font-size: 2.2em; /* set the font size to 2.5em */
   color: white; /* set the color to white */
   display: flex; /* Add this property to make the icons flexible */
@@ -101,5 +101,5 @@ a {
   font-size: 1.5em;
   display: flex; /* Add this property to make the icons flexible */
   justify-content: space-between; /* Distribute the icons evenly */
-  margin-right: 100px; /* add a margin to the right */
+  margin-right: 20px; /* add a margin to the right */
 }
