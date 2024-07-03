@@ -87,17 +87,15 @@ a {
 .icon1 {
   font-size: 2.2em; /* set the font size to 2.5em */
   color: white; /* set the color to white */
-  margin-right: 300px;
-  transform: translate(-50%, -10%); /* fine-tune the positioning */
+  transform: translate( -200%, -10%); /* fine-tune the positioning */
 }
 .icon2 {
   font-size: 1.5em;
   text-align: center;
-  transform: translate(-50%, -10%); /* fine-tune the positioning */
+  transform: translate(0%, -10%); /* fine-tune the positioning */
 }
 .icon3 {
   margin-top: 8px;
   font-size: 1.5em;
-  margin-left: 300px;
-  transform: translate(-50%, -10%); /* fine-tune the positioning */
+  transform: translate( 200%, -10%); /* fine-tune the positioning */
 }
