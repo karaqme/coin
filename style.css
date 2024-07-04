@@ -55,6 +55,28 @@ a {
   text-decoration: none;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+.div1 {
+  background: rgb(36, 36, 48);
+}
+.icon1 {
+  font-size: 2.45em;
+  color: white;
+  margin: auto;
+}
+.icon2 {
+  font-size: 2.11em;
+  color: white;
+  margin: auto;
+}
+.icon3 {
+  margin-top: 50px;
+  font-size: 2.45em;
+  color: white;
+  margin: auto;
+}
 #man {
   display: inline-block;
   position: relative;
@@ -83,26 +105,7 @@ a {
   height: 40%;
   border-radius: 100% 100% 0% 0%;
 }
-.icon1 {
-  font-size: 2.2em; /* set the font size to 2.5em */
-  color: white; /* set the color to white */
-  display: flex; /* Add this property to make the icons flexible */
-  justify-content: space-between; /* Distribute the icons evenly */
-  margin-left: 3%;
-}
-.icon2 {
-  font-size: 1.5em;
-  text-align: center;
-  display: flex; /* Add this property to make the icons flexible */
-  justify-content: space-between; /* Distribute the icons evenly */
-}
-.icon3 {
-  margin-top: 7px;
-  font-size: 1.5em;
-  display: flex; /* Add this property to make the icons flexible */
-  justify-content: space-between; /* Distribute the icons evenly */
-  margin-right: 3%;
-}
+
 #home2 {
   display: none;
 }
