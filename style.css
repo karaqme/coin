@@ -54,11 +54,6 @@ body {
   justify-content: space-between;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-}
-
 .flex-grow {
   flex-grow: 1;
 }
@@ -70,19 +65,21 @@ a {
 }
 .icon1 {
   font-size: 2.45em;
-  color: white;
+  color: rgb(250, 240, 240);
   margin: auto;
-  list-style-type: none;
+  user-select: none;
 }
 .icon2 {
   font-size: 2.45em;
   color: white;
+  user-select: none;
   margin: auto;
 }
 .icon3 {
   margin-top: 50px;
   font-size: 2.45em;
-  color: white;
+  color: rgb(235, 235, 235);
+  user-select: none;
   margin: auto;
 }
 @media only screen and (max-width: 768px) {
@@ -94,8 +91,8 @@ a {
 #man {
   display: inline-block;
   position: relative;
-  width: 0.8em; /* increase the width of the icon */
-  height: 0.8em; /* increase the height of the icon */ 
+  width: 0.6em; /* increase the width of the icon */
+  height: 0.6em; /* increase the height of the icon */ 
 }
 
 #man::before,
@@ -128,4 +125,10 @@ a {
 }
 .schet {
   color: white;
+}
+.myr {
+  display:inline-flex;
+}
+span {
+  margin-top:10px;
 }
