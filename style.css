@@ -1,14 +1,10 @@
-* {
+body {
   text-align: center;
   background-color: rgb(0, 0, 0);
   margin-left: 0;
 }
-.tg-mini-app-body {
-  background-color: #000000;
-}
-.tg-mini-app-title {
-  background-color: #000000;
-  color: #fff;
+:root {
+  --tg-theme-secondary-bg-color: #000000;
 }
 .xd {
   margin-bottom: 20px;
