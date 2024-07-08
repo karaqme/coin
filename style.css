@@ -1,4 +1,4 @@
-body {
+* {
   text-align: center;
   background-color: rgb(0, 0, 0);
   margin-left: 0;
@@ -44,10 +44,10 @@ body {
   display: flex; /* add this to center vertically and horizontally */
   justify-content: space-between; /* center it horizontally */
   align-items: center; /* center it vertically */
-    position: fixed;
-    bottom: 0; /* position it at the bottom of the page */
-    left: 0; /* position it at the left edge of the page */
-    right: 0; /* position it at the right edge of the page */
+  position: fixed; /* add this to make the footer stay on the bottom */
+  bottom: 0; /* set the footer to the bottom of the page */
+  left: 0; /* position it at the left edge of the page */
+  right: 0; /* position it at the right edge of the page */
 }
 .flex-container {
   display: flex;
@@ -64,20 +64,20 @@ body {
   background: rgb(36, 36, 48);
 }
 .icon1 {
-  font-size: 2.45em;
+  font-size: 2.44em;
   color: rgb(250, 240, 240);
   margin: auto;
   user-select: none;
 }
 .icon2 {
-  font-size: 2.45em;
+  font-size: 2.44em;
   color: white;
   user-select: none;
   margin: auto;
 }
 .icon3 {
   margin-top: 50px;
-  font-size: 2.45em;
+  font-size: 2.44em;
   color: rgb(235, 235, 235);
   user-select: none;
   margin: auto;
