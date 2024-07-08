@@ -12,125 +12,101 @@ body {
 }
 
 .balance {
-  position: relative; /* добавьте это, чтобы сделать контейнер относительным */
   text-align: center;
   color: white;
   font-style: bold;
   font-size: 20px;
-  vertical-align: middle;
-  margin: auto;
-  height: 40px; /* add a fixed height for .balance */
 }
 
 .img1 {
   display: inline-block;
-  width: 20px; /* см. ширину, подходящую для вашего случая */
+  width: 20px; 
 }
 
 .img2 {
-  display: block;
+  width: 200px; /* adjust the width to fit smaller screens */
   margin: 0 auto;
-  width: 240px; /* adjust the width to fit the screen */
-  height: auto;
-  max-width: 100%; /* make it responsive for mobile devices */
-  position: absolute; /* add this to make the element positionable */
-  left: 50%; /* center it horizontally */
-  top: 50%; /* center it vertically */
-  transform: translate(-50%, -50%); /* fine-tune the positioning */
 }
 
 .header {
-  background-color: #000000; /* adjust the background color to your liking */
-  padding: 10px; /* add some padding for better looks */
-  text-align: center; /* center the text horizontally */
-  display: flex; /* add this to center vertically and horizontally */
-  justify-content: space-between; /* center it horizontally */
-  align-items: center; /* center it vertically */
-  position: fixed; /* add this to make the footer stay on the bottom */
-  bottom: 0; /* set the footer to the bottom of the page */
-  left: 0; /* position it at the left edge of the page */
-  right: 0; /* position it at the right edge of the page */
+  background-color: #000000; 
+  padding: 10px; 
+  text-align: center; 
 }
+
 .flex-container {
   display: flex;
-  justify-content: space-between;
 }
 
 .flex-grow {
   flex-grow: 1;
 }
+
 .div1, .div2, .div3 {
-  flex-basis: 33.33%; /* divide the footer into three equal parts */
+  flex-basis: 33.33%; 
 }
+
 .div1 {
   background: rgb(36, 36, 48);
 }
+
 .icon1 {
   font-size: 2.44em;
   color: rgb(250, 240, 240);
-  margin: auto;
-  user-select: none;
 }
+
 .icon2 {
-  font-size: 2.44em;
-  color: white;
-  user-select: none;
-  margin: auto;
+ font-size: 2.44em; 
+ color: white; 
 }
+
 .icon3 {
-  margin-top: 50px;
-  font-size: 2.44em;
-  color: rgb(235, 235, 235);
-  user-select: none;
-  margin: auto;
+ font-size: 2.44em; 
+ color: rgb(235,235,235); 
+ margin-top:50px; 
 }
-@media only screen and (max-width: 768px) {
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+
 #man {
-  display: inline-block;
-  position: relative;
-  width: 0.6em; /* increase the width of the icon */
-  height: 0.6em; /* increase the height of the icon */ 
+ display:inline-block; 
+ position:relative; 
+ width:.6em; 
+ height:.6em; 
 }
 
 #man::before,
 #man::after {
-  content: "";
-  position: absolute;
-  background: currentColor; /* color of the icon as the text color */ 
+ content:"";
+ position:absolute; 
+ background:white; /* color of the icon as the text color */
 }
 
 #man::before {
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  border-radius: 100%;
+ left:25%;
+ width:50%;
+ height:50%;
+ border-radius:100%;
 }
 
 #man::after {
-  left: 0;
-  bottom: 0%;
-  width: 100%;
-  height: 40%;
-  border-radius: 100% 100% 0% 0%;
+ left:0;
+ bottom:0%;
+ width:100%;
+ height:40%;
+ border-radius:100%100%0%0%;
 }
 
-#home2 {
-  display: none;
-}
-#home3 {
-  display: none;
-}
 .schet {
-  color: white;
+ color:white;
 }
-.myr {
-  display:inline-flex;
+.myr{
+ display:inline-flex;
 }
-span {
-  margin-top:10px;
+span{
+ margin-top:10px;
+}
+@media only screen and (max-width:768px) {
+ .flex-container{
+   flex-direction:column;
+   align-items:center;
+ }
 }
