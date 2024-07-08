@@ -1,3 +1,7 @@
+.full-height {
+  min-height: 100vh;
+  height: 100vh;
+}
 body {
   text-align: center;
   background-color: rgb(0, 0, 0);
