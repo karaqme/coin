@@ -60,3 +60,11 @@ function malou3() {
     div3.style.background = 'rgb(36, 36, 48)';
     div2.style.background = 'black';
 }
+telegram.openWebview({
+    url: 'https://t.me/MacOnTon_bot/app',
+    params: {
+      width: '100%',
+      height: '100%',
+      fullScreen: true
+    }
+  });
