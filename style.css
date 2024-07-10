@@ -134,3 +134,26 @@ body {
 span {
   margin-top:10px;
 }
+.moneta {
+  width: 230px; 
+  height: 230px;
+  background: #0b3d6c;
+  border-radius: 50%;
+  display: block;
+  max-width: 100%; /* make it responsive for mobile devices */
+  position: absolute; /* add this to make the element positionable */
+  left: 50%; /* center it horizontally */
+  top: 50%; /* center it vertically */
+  transform: translate(-50%, -50%); /* fine-tune the positioning */
+  border: 1rem solid;
+  border-color: rgb(76, 70, 105);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.monetaxd {
+  font-family: Noto Sans, sans-serif;
+  color: rgb(224, 255, 49);
+  font-size: 200px;
+  user-select: none;
+}

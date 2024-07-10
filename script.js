@@ -1,30 +1,34 @@
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
 let schet = document.getElementById('schet');
 let schetValue = parseInt(schet.textContent.split('/')[1]);
+let timer = null;
 
 function addBalance() {
-    balance++;
-}
+    if (balance > 0) {
+      balance--;
+      schetValue = Math.max(schetValue - 1, 0); // ensure schetValue doesn't go below 0
+      updateBalance();
+    }
+  }
 
 function updateBalance() {
-    schetValue++;
-    document.querySelector('.balance').innerHTML = '<img src="msg6362875622-76286 (1).png" alt="" class="img1"> ' + balance;
-    schet.innerHTML = schetValue + '/500';
+  document.querySelector('.balance').innerHTML = '<img src="msg6362875622-76286 (1).png" alt="" class="img1"> ' + balance;
+  schet.innerHTML = schetValue + '/500';
 }
 
-let intervalId = null;
-setInterval(function() {
+function startTimer() {
+  timer = setInterval(() => {
     if (schetValue < 500) {
-        updateBalance();
+      schetValue++;
+      updateBalance();
     } else {
-        clearInterval(intervalId);
+      clearInterval(timer);
     }
-}, 1000); // update every 1000ms (1 second)
+  }, 1000);
+}
 
-document.querySelector('.img2').addEventListener('click', function() {
-    schetValue--;
-    schet.innerHTML = schetValue + '/500';
-});
+document.querySelector('.moneta').addEventListener('click', addBalance);
+startTimer();
 
 updateBalance(); // initial update
 
@@ -60,11 +64,3 @@ function malou3() {
     div3.style.background = 'rgb(36, 36, 48)';
     div2.style.background = 'black';
 }
-telegram.openWebview({
-    url: 'https://t.me/MacOnTon_bot/app',
-    params: {
-      width: '100%',
-      height: '100%',
-      fullScreen: true
-    }
-  });
