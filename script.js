@@ -1,25 +1,20 @@
-if (tg != undefined) {
-    console.log('Telegram initialized');
-    if (tg.WebApp != undefined && tg.WebApp.initData != undefined) {
-      console.log('WebApp initialized');
-      let safe = tg.WebApp.initData;
-      try {
-        tg.WebApp.backgroundColor = '#3d3d3d';
-        tg.WebApp.headerColor = '#212121';
-        tg.WebApp.expand();
-        console.log('Colors changed successfully!');
-      } catch (error) {
-        console.error('Error changing colors:', error);
-      }
-    } else {
-      console.error('WebApp not initialized');
-    }
-  } else {
-    console.error('Telegram not initialized');
-  }
+// получаем ссылку на кнопку, которая запускает мини-апп
+const button = document.getElementById('telegram-button');
 
+// добавляем слушатель клика на кнопку
+button.addEventListener('click', () => {
+  // получаем токен вашего телеграм-бота
+  const token = '7234034998:AAHwu_LN_vuHgQyDUDCOru5WCI704-Wh_dg';
 
+  // получаем ID чата, в котором должен открыться мини-апп
+  const chatId = 'MacOnTon_bot';
 
+  // создаем URL для открытия мини-апп
+  const url = `https://api.telegram.org/bot${token}/botinline?startgroup=true&chat_id=${chatId}`;
+
+  // открываем мини-апп на весь экран
+  window.open(url, '_blank', 'width=800,height=600,resizable=yes,scrollbars=yes');
+});
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
 let schet = document.getElementById('schet');
 let schetValue = parseInt(schet.textContent.split('/')[1]);
