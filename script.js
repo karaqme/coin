@@ -1,16 +1,22 @@
-let tg      = window.Telegram;
-  
-if(tg != undefined){
-  if (tg.WebApp != undefined && tg.WebApp.initData != undefined){
-   
-  let safe    = tg.WebApp.initData;
-  
-  tg.WebApp.backgroundColor = '#3d3d3d';
-  tg.WebApp.headerColor = '#212121';
-  tg.WebApp.expand(); 
-
-  }    
-}
+if (tg != undefined) {
+    console.log('Telegram initialized');
+    if (tg.WebApp != undefined && tg.WebApp.initData != undefined) {
+      console.log('WebApp initialized');
+      let safe = tg.WebApp.initData;
+      try {
+        tg.WebApp.backgroundColor = '#3d3d3d';
+        tg.WebApp.headerColor = '#212121';
+        tg.WebApp.expand();
+        console.log('Colors changed successfully!');
+      } catch (error) {
+        console.error('Error changing colors:', error);
+      }
+    } else {
+      console.error('WebApp not initialized');
+    }
+  } else {
+    console.error('Telegram not initialized');
+  }
 
 
 
