@@ -11,7 +11,21 @@ if(tg != undefined){
 
   }    
 }
+const TelegramBot = require('node-telegram-bot-sdk');
 
+const bot = new TelegramBot('7234034998:AAHwu_LN_vuHgQyDUDCOru5WCI704-Wh_dg', { polling: true });
+
+bot.on('message', (msg) => {
+  const chatId = msg.chat.id;
+  bot.getChat(chatId).then((chat) => {
+    console.log(`Username: ${chat.username}`);
+    console.log(`First Name: ${chat.first_name}`);
+    console.log(`Last Name: ${chat.last_name}`);
+    console.log(`User ID: ${chat.id}`);
+  }).catch((error) => {
+    console.error(error);
+  });
+});
 
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
 let schet = document.getElementById('schet');
