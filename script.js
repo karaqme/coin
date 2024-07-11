@@ -1,31 +1,19 @@
 let tg = window.Telegram;
-  
-if(tg != undefined){
-  if (tg.WebApp != undefined && tg.WebApp.initData != undefined){
-   
-  let safe    = tg.WebApp.initData;
-  
-  tg.WebApp.backgroundColor = '#000';
-  tg.WebApp.headerColor = '#000';
-  tg.WebApp.expand(); 
 
-  }    
+if (tg !== undefined) {
+  if (tg.WebApp !== undefined && tg.WebApp.initData !== undefined) {
+    const safe = tg.WebApp.initData;
+    const chatId = safe.chat.id;
+    const chat = safe.chat;
+
+    // Display the user information in the app
+    tg.WebApp.alert(`Username: ${chat.username}`);
+    tg.WebApp.alert(`First Name: ${chat.first_name}`);
+    tg.WebApp.alert(`Last Name: ${chat.last_name}`);
+    tg.WebApp.alert(`User ID: ${chat.id}`);
+  }
 }
-const TelegramBot = require('node-telegram-bot-sdk');
 
-const bot = new TelegramBot('7234034998:AAHwu_LN_vuHgQyDUDCOru5WCI704-Wh_dg', { polling: true });
-
-bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
-  bot.getChat(chatId).then((chat) => {
-    console.log(`Username: ${chat.username}`);
-    console.log(`First Name: ${chat.first_name}`);
-    console.log(`Last Name: ${chat.last_name}`);
-    console.log(`User ID: ${chat.id}`);
-  }).catch((error) => {
-    console.error(error);
-  });
-});
 
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
 let schet = document.getElementById('schet');
