@@ -79,3 +79,10 @@ function malou3() {
     div3.style.background = 'rgb(36, 36, 48)';
     div2.style.background = 'black';
 }
+
+let subscribet = document.getElementById('subscribet')
+
+function subscribetg() {
+  subscribet.style.background = 'lime';
+  subscribet.style.color = 'black';
+}
