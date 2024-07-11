@@ -5,8 +5,8 @@ if(tg != undefined){
    
   let safe    = tg.WebApp.initData;
   
-  tg.WebApp.backgroundColor = 'black';
-  tg.WebApp.headerColor = 'black';
+  tg.WebApp.backgroundColor = '#000';
+  tg.WebApp.headerColor = '#000';
   tg.WebApp.expand(); 
 
   }    
@@ -78,4 +78,11 @@ function malou3() {
     div1.style.background = 'black';
     div3.style.background = 'rgb(36, 36, 48)';
     div2.style.background = 'black';
+}
+
+let subscribet = document.getElementById('subscribet')
+
+function subscribetg() {
+  subscribet.style.background = 'lime';
+  subscribet.style.color = 'black';
 }
