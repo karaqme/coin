@@ -1,4 +1,4 @@
-let tg = window.Telegram;
+let tg      = window.Telegram;
   
 if(tg != undefined){
   if (tg.WebApp != undefined && tg.WebApp.initData != undefined){
