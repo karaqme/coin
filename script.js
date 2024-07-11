@@ -13,26 +13,6 @@ if(tg != undefined){
 }
 
 
-import { WebApp } from 'tg-mini-app';
-
-const app = new WebApp({
-  token: 'YOUR_BOT_TOKEN',
-  // ... other app settings ...
-});
-
-app.initData((data) => {
-  const chatId = data.chat.id;
-  const chat = data.chat;
-
-  // Display the user information in the app
-  app.alert(`Username: ${chat.username}`);
-  app.alert(`First Name: ${chat.first_name}`);
-  app.alert(`Last Name: ${chat.last_name}`);
-  app.alert(`User ID: ${chat.id}`);
-});
-
-
-
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
 let schet = document.getElementById('schet');
 let schetValue = parseInt(schet.textContent.split('/')[1]);
