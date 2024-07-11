@@ -5,8 +5,8 @@ if(tg != undefined){
    
   let safe    = tg.WebApp.initData;
   
-  tg.WebApp.backgroundColor = '#3d3d3d';
-  tg.WebApp.headerColor = '#212121';
+  tg.WebApp.backgroundColor = '#000';
+  tg.WebApp.headerColor = '#000';
   tg.WebApp.expand(); 
 
   }    
