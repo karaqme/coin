@@ -1,48 +1,51 @@
-let tg      = window.Telegram;
-  
-if(tg != undefined){
-  if (tg.WebApp != undefined && tg.WebApp.initData != undefined){
-   
-  let safe    = tg.WebApp.initData;
-  
-  tg.WebApp.backgroundColor = '#000';
-  tg.WebApp.headerColor = '#000';
-  tg.WebApp.expand(); 
+let tg = window.Telegram;
 
-  }    
+if (tg!= undefined) {
+  if (tg.WebApp!= undefined) {
+    tg.WebApp.onReady(() => {
+      const initData = tg.WebApp.initData;
+      const safe = initData;
+
+      tg.WebApp.backgroundColor = '#000';
+      tg.WebApp.headerColor = '#000';
+      tg.WebApp.expand();
+
+      const dataCheckString = `auth_date=${initData.auth_date}\nquery_id=${initData.query_id}\nuser=${initData.user}`;
+      const secretKey = "7234034998:AAHwu_LN_vuHgQyDUDCOru5WCI704-Wh_dg";
+      const hash = initData.hash;
+
+      const crypto = require('crypto-js');
+      const hmac = crypto.HmacSHA256(dataCheckString, secretKey);
+      const hmacHex = hmac.toString(crypto.enc.Hex);
+
+      if (hmacHex === hash) {
+        const userData = initData.user;
+        const userId = userData.id;
+        const userName = userData.first_name;
+        const userUsername = userData.username;
+        const userLanguageCode = userData.language_code;
+        const userPhoto = userData.photo;
+
+        // Update the HTML elements with user information
+        document.getElementById('home1').innerHTML = `
+          <p class="xd">Ваш баланс:</p>
+          <p class="balance">
+            <img src="${userPhoto}" alt="" class="img1">
+            25000
+          </p>
+        `;
+
+        // Add event listeners to the buttons
+        document.getElementById('subscribet').addEventListener('click', subscribetg);
+        document.getElementById('div1').addEventListener('click', malou1);
+        document.getElementById('div2').addEventListener('click', malou2);
+        document.getElementById('div3').addEventListener('click', malou3);
+      } else {
+        console.error("Invalid initData");
+      }
+    });
+  }
 }
-
-
-// Get initData
-const initData = Telegram.WebApp.initData;
-
-// Validate initData
-const dataCheckString = `auth_date=${initData.auth_date}\nquery_id=${initData.query_id}\nuser=${initData.user}`;
-const secretKey = HMAC_SHA256("7234034998:AAHwu_LN_vuHgQyDUDCOru5WCI704-Wh_dg", "WebAppData");
-const hash = initData.hash;
-if (hex(HMAC_SHA256(dataCheckString, secretKey)) === hash) {
-  // Data is from Telegram
-  const userData = initData.user;
-  const userId = userData.id;
-  const userName = userData.first_name;
-  const userUsername = userData.username;
-  const userLanguageCode = userData.language_code;
-  const userPhoto = userData.photo;
-
-  // Display user information in HTML
-  const html = `
-    <h1>User Information</h1>
-    <p>ID: ${userId}</p>
-    <p>Name: ${userName}</p>
-    <p>Username: ${userUsername}</p>
-    <p>Language Code: ${userLanguageCode}</p>
-    <img src="${userPhoto}" alt="User Photo">
-  `;
-  document.body.innerHTML = html;
-} else {
-  console.error("Invalid initData");
-}
-
 
 
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
