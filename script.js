@@ -81,3 +81,11 @@ function malou3() {
     div3.style.background = 'rgb(36, 36, 48)';
     div2.style.background = 'black';
 }
+
+let h3 = document.getElementById('h3')
+
+function myr1() {
+  h3.innerHTML = '✔️';
+  balance += 5000;
+
+}

@@ -63,6 +63,7 @@ body {
 }
 .div1, .div2, .div3 {
   flex-basis: 33.33%; /* divide the footer into three equal parts */
+  border-radius: 50px;
 }
 .div1 {
   background: rgb(36, 36, 48);
@@ -186,4 +187,7 @@ h3 {
 }
 h2 {
   margin-top: 5px;
+}
+.xz {
+  text-decoration: none;
 }
