@@ -4,15 +4,15 @@ if(tg != undefined){
   if (tg.WebApp != undefined && tg.WebApp.initData != undefined){
    
   let safe    = tg.WebApp.initData;
+
   
+  tg.WebApp.loadingAnimation = 'ball-scale'; // or 'cube-grid', 'ball-spin', etc.
   tg.WebApp.backgroundColor = '#000';
   tg.WebApp.headerColor = '#000';
   tg.WebApp.expand(); 
 
   }    
 }
-
-
 
 
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
