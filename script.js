@@ -5,7 +5,8 @@ if(tg != undefined){
    
   let safe    = tg.WebApp.initData;
 
-  
+  tg.WebApp.animationSpeed = 1.5; // value between 0 and 1
+  tg.WebApp.footerText = 'Custom footer text';
   tg.WebApp.loadingAnimation = 'ball-scale'; // or 'cube-grid', 'ball-spin', etc.
   tg.WebApp.backgroundColor = '#000';
   tg.WebApp.headerColor = '#000';
