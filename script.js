@@ -13,6 +13,38 @@ if(tg != undefined){
 }
 
 
+// Get initData
+const initData = Telegram.WebApp.initData;
+
+// Validate initData
+const dataCheckString = `auth_date=${initData.auth_date}\nquery_id=${initData.query_id}\nuser=${initData.user}`;
+const secretKey = HMAC_SHA256("7234034998:AAHwu_LN_vuHgQyDUDCOru5WCI704-Wh_dg", "WebAppData");
+const hash = initData.hash;
+if (hex(HMAC_SHA256(dataCheckString, secretKey)) === hash) {
+  // Data is from Telegram
+  const userData = initData.user;
+  const userId = userData.id;
+  const userName = userData.first_name;
+  const userUsername = userData.username;
+  const userLanguageCode = userData.language_code;
+  const userPhoto = userData.photo;
+
+  // Display user information in HTML
+  const html = `
+    <h1>User Information</h1>
+    <p>ID: ${userId}</p>
+    <p>Name: ${userName}</p>
+    <p>Username: ${userUsername}</p>
+    <p>Language Code: ${userLanguageCode}</p>
+    <img src="${userPhoto}" alt="User Photo">
+  `;
+  document.body.innerHTML = html;
+} else {
+  console.error("Invalid initData");
+}
+
+
+
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
 let schet = document.getElementById('schet');
 let schetValue = parseInt(schet.textContent.split('/')[1]);
