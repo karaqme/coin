@@ -3,7 +3,7 @@ if (tg != undefined) {
   if (tg.WebApp != undefined && tg.WebApp.initData != undefined) {
     let safe = tg.WebApp.initData;
     tg.WebApp.curtainSwipeEnabled = false;
-    tg.WebApp.curtainOffset = 100; // or any other value
+    tg.WebApp.curtainOffset = 500; // or any other value
     tg.WebApp.backgroundColor = '#000';
     tg.WebApp.headerColor = '#000';
     tg.WebApp.expand();
@@ -27,10 +27,16 @@ function getUserData(key) {
   }
 }
 
-let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
-let schet = document.getElementById('schet');
-let schetValue = parseInt(schet.textContent.split('/')[1]);
+// Initialize balance from LocalStorage
+let balance = parseInt(getUserData('balance') || 25000);
 
+// Update balance function
+function updateBalance() {
+  document.querySelector('.balance').innerHTML = '<img src="msg6362875622-76286 (1).png" alt="" class="img1"> ' + balance;
+  schet.innerHTML = schetValue + '/500';
+}
+
+// Add balance function
 function addBalance() {
   if (balance > 0) {
     balance++;
@@ -40,11 +46,7 @@ function addBalance() {
   }
 }
 
-function updateBalance() {
-  document.querySelector('.balance').innerHTML = '<img src="msg6362875622-76286 (1).png" alt="" class="img1"> ' + balance;
-  schet.innerHTML = schetValue + '/500';
-}
-
+// Start timer
 function startTimer() {
   timer = setInterval(() => {
     if (schetValue < 500) {
