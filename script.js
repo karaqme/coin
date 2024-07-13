@@ -5,20 +5,10 @@ if(tg != undefined){
    
   let safe    = tg.WebApp.initData;
 
-  tg.initDataUnsafe.user.id // уникальный идентификатор пользователя
-tg.initDataUnsafe.user.isBot // бот ли пользователь (true/false)
-tg.initDataUnsafe.user.first_name // имя пользователя
-tg.initDataUnsafe.user.last_name // "фамилия" пользователя
-tg.initDataUnsafe.user.username // username пользователя
-tg.initDataUnsafe.user.language_code // код языка пользователя
-
-
   tg.WebApp.isVerticalSwipesEnabled = false;
   tg.WebApp.backgroundColor = '#000';
   tg.WebApp.headerColor = '#000';
-  tg.ready() // метод позволяет отследить, когда приложение готово к отображению.
   tg.WebApp.expand(); 
-  tg.close() // метод закрывает приложение.
   }    
 }
 
@@ -107,19 +97,3 @@ function myr2() {
   updateBalance(); // Update the balance display
   tg.WebApp.storage.set('balance', balance); // Store the new balance in Telegram Storage
 }
-
-
-
-
-let usercard = document.getElementById("usercard"); //получаем блок usercard 
-
-let profName = document.createElement('p'); //создаем параграф
-profName.innerText = `${tg.initDataUnsafe.user.first_name}
-${tg.initDataUnsafe.user.last_name}
-${tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;
-//выдем имя, "фамилию", через тире username и код языка
-usercard.appendChild(profName); //добавляем 
-
-let userid = document.createElement('p'); //создаем еще параграф 
-userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
-usercard.appendChild(userid); //добавляем
