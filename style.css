@@ -168,7 +168,7 @@ body {
   margin: 0;
 }
 
-.todo-list-div {
+.todo-list-div1 {
   position: relative;
   font-family: 'Courier New', Courier, monospace;
   background-color: rgb(56, 56, 56);
@@ -177,9 +177,11 @@ body {
   height: 70px;
   border-radius: 100px;
   user-select: none;
+  padding: 10px 0px 0px 15px;
+  margin: 20px;
 }
 h3 {
-  color: white;
+  color: rgb(204, 204, 204);
   position: absolute;
   right: 30px;
   top: 35%;
@@ -190,4 +192,11 @@ h2 {
 }
 .xz {
   text-decoration: none;
+}
+.xaxaxa {
+  text-align: center;
+  color: white;
+  user-select: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
 }

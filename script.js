@@ -83,9 +83,13 @@ function malou3() {
 }
 
 let h3 = document.getElementById('h3')
+let h4 = document.getElementById('h4')
 
 function myr1() {
   h3.innerHTML = '✔️';
   balance += 5000;
-
+}
+function myr2() {
+  h4.innerHTML = '✔️';
+  balance += 5000;
 }
