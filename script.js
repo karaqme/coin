@@ -5,27 +5,24 @@ if(tg != undefined){
    
   let safe    = tg.WebApp.initData;
 
-  tg.WebApp.isVerticalSwipesEnabled = false;
+  tg.isVerticalSwipesEnabled = false;
   tg.WebApp.backgroundColor = '#000';
   tg.WebApp.headerColor = '#000';
   tg.WebApp.expand(); 
   }    
 }
 
-
-
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
 let schet = document.getElementById('schet');
 let schetValue = parseInt(schet.textContent.split('/')[1]);
 let timer = null;
-
 function addBalance() {
     if (balance > 0) {
       balance++;
       schetValue = Math.max(schetValue - 1, 0); // ensure schetValue doesn't go below 0
       updateBalance();
     }
-  }
+}
 
 function updateBalance() {
   document.querySelector('.balance').innerHTML = '<img src="msg6362875622-76286 (1).png" alt="" class="img1"> ' + balance;
@@ -37,7 +34,12 @@ function startTimer() {
     if (schetValue < 500) {
       schetValue++;
       updateBalance();
-    } else {
+    } else if (schetValue = 499) {
+      schetValue++;
+      updateBalance();
+    } 
+    
+    else {
       clearInterval(timer);
     }
   }, 1000);

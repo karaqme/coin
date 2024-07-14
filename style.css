@@ -9,7 +9,7 @@ body {
   text-align: center;
   margin-bottom: 20px;
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .balance {
@@ -26,20 +26,10 @@ body {
 
 .img1 {
   display: inline-block;
-  width: 20px; /* см. ширину, подходящую для вашего случая */
+  width: 30px; /* см. ширину, подходящую для вашего случая */
+  margin: -10px;
 }
 
-.img2 {
-  display: block;
-  margin: 0 auto;
-  width: 240px; /* adjust the width to fit the screen */
-  height: auto;
-  max-width: 100%; /* make it responsive for mobile devices */
-  position: absolute; /* add this to make the element positionable */
-  left: 50%; /* center it horizontally */
-  top: 50%; /* center it vertically */
-  transform: translate(-50%, -50%); /* fine-tune the positioning */
-}
 
 .header {
   background-color: #000000; /* adjust the background color to your liking */
@@ -64,6 +54,7 @@ body {
 .div1, .div2, .div3 {
   flex-basis: 33.33%; /* divide the footer into three equal parts */
   border-radius: 50px;
+  text-align: center;
 }
 .div1 {
   background: rgb(36, 36, 48);
@@ -79,6 +70,7 @@ body {
   color: white;
   user-select: none;
   margin: auto;
+  transform: translateY(10%);
 }
 .icon3 {
   margin-top: 50px;
@@ -133,27 +125,32 @@ body {
 }
 .myr {
   display:inline-flex;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .energy {
   margin-top:10px;
 }
 .moneta {
-  width: 230px; 
+  width: 230px;
   height: 230px;
   background: #0b3d6c;
   border-radius: 50%;
   display: block;
-  max-width: 100%; /* make it responsive for mobile devices */
-  position: absolute; /* add this to make the element positionable */
-  left: 50%; /* center it horizontally */
-  top: 50%; /* center it vertically */
-  transform: translate(-50%, -50%); /* fine-tune the positioning */
+  max-width: 100%;
   border: 1rem solid;
   border-color: rgb(41, 22, 135);
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  transition: transform 0.15s;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate3d(0, 0, 0); /* Add this line */
+}
+.moneta:active {
+  transform: scale3d(1.2, 1.2, 1.2); /* Update this line */
 }
 .monetaxd {
   font-family: Noto Sans, sans-serif;
