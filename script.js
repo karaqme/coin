@@ -6,7 +6,6 @@ if (tg != undefined) {
     tg.WebApp.headerColor = '#000';
     tg.WebApp.expand();
     tg.WebApp.enableClosingConfirmation();
-    tg.WebApp.close();
   }
 }
 
