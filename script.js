@@ -5,7 +5,8 @@ if (tg != undefined) {
     tg.WebApp.backgroundColor = '#000';
     tg.WebApp.headerColor = '#000';
     tg.WebApp.expand();
-    window.Telegram.WebApp.close()
+    tg.WebApp.enableClosingConfirmation();
+    tg.WebApp.close();
   }
 }
 
