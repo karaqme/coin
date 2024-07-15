@@ -147,10 +147,6 @@ body {
   position: relative;
   margin: 0 auto;
   top: 50%;
-  transform: translate3d(0, 0, 0); /* Add this line */
-}
-.moneta:active {
-  transform: scale3d(1.2, 1.2, 1.2); /* Update this line */
 }
 .monetaxd {
   font-family: Noto Sans, sans-serif;
