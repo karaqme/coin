@@ -32,7 +32,7 @@ function startTimer() {
     if (schetValue < 500) {
       schetValue++;
       updateBalance();
-    } else if (schetValue === 499) {
+    } else if (schetValue = 499) {
       schetValue++;
       updateBalance();
     } else {
@@ -87,12 +87,10 @@ function myr1() {
   h3.innerHTML = '✔️';
   balance += 5000;
   updateBalance(); // Update the balance display
-  tg.WebApp.storage.set('balance', balance); // Store the new balance in Telegram Storage
 }
 
 function myr2() {
   h4.innerHTML = '✔️';
   balance += 5000;
   updateBalance(); // Update the balance display
-  tg.WebApp.storage.set('balance', balance); // Store the new balance in Telegram Storage
 }
