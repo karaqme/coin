@@ -1,14 +1,3 @@
-let tg = window.Telegram;
-if (tg != undefined) {
-  if (tg.WebApp != undefined && tg.WebApp.initData != undefined) {
-    let safe = tg.WebApp.initData;
-    tg.WebApp.backgroundColor = '#000';
-    tg.WebApp.headerColor = '#000';
-    tg.WebApp.expand();
-    tg.WebApp.enableClosingConfirmation();
-  }
-}
-
 let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
 let schet = document.getElementById('schet');
 let schetValue = parseInt(schet.textContent.split('/')[1]);
