@@ -1,4 +1,4 @@
-let balance = parseInt(document.querySelector('.balance').textContent.replace(/[^0-9]/g, ''));
+let balance = parseInt(localStorage.getItem('balance')) || 500;
 let schet = document.getElementById('schet');
 let schetValue = parseInt(schet.textContent.split('/')[1]);
 let timer = null;
@@ -14,6 +14,7 @@ function addBalance() {
 function updateBalance() {
   document.querySelector('.balance').innerHTML = '<img src="msg6362875622-76286 (1).png" alt="" class="img1"> ' + balance;
   schet.innerHTML = schetValue + '/500';
+  localStorage.setItem('balance', balance);
 }
 
 function startTimer() {
@@ -34,6 +35,8 @@ document.querySelector('.moneta').addEventListener('click', addBalance);
 startTimer();
 
 updateBalance(); // initial update
+
+
 
 let home1 = document.getElementById('home1');
 let home2 = document.getElementById('home2');
