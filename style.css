@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(3, 0, 30);
+  background-color: rgb(0, 0, 0);
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -33,7 +33,7 @@ body {
 
 .header {
   background-color: #000000; /* adjust the background color to your liking */
-  padding: 10px; /* add some padding for better looks */
+  padding: 5px; /* add some padding for better looks */
   text-align: center; /* center the text horizontally */
   display: flex; /* add this to center vertically and horizontally */
   justify-content: space-between; /* center it horizontally */
@@ -42,6 +42,11 @@ body {
   bottom: 0; /* set the footer to the bottom of the page */
   left: 0; /* position it at the left edge of the page */
   right: 0; /* position it at the right edge of the page */
+}
+
+.header span {
+  display: block; /* make the span a block element */
+  color: #ffffff; /* adjust the text color to your liking */
 }
 .flex-container {
   display: flex;
@@ -55,6 +60,11 @@ body {
   flex-basis: 33.33%; /* divide the footer into three equal parts */
   border-radius: 50px;
   text-align: center;
+  display: flex; /* make the div a flex container */
+  flex-direction: column; /* stack the icon and text vertically */
+  align-items: center; /* center the icon and text horizontally */
+  user-select: none;
+
 }
 .div1 {
   background: rgb(36, 36, 48);
