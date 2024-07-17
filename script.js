@@ -52,6 +52,9 @@ let home3 = document.getElementById('home3');
 let div1 = document.getElementById('div1');
 let div2 = document.getElementById('div2');
 let div3 = document.getElementById('div3');
+let spanhome = document.getElementById('spanhome');
+let spanearn = document.getElementById('spanearn');
+let spanfriend = document.getElementById('spanfriend');
 
 function malou2() {
   home1.style.display = 'none';
@@ -60,6 +63,9 @@ function malou2() {
   div1.style.background = 'black';
   div3.style.background = 'black';
   div2.style.background = 'rgb(36, 36, 48)';
+  spanearn.style.color = 'white';
+  spanhome.style.color = '#ababab';
+  spanfriend.style.color = '#ababab';
 }
 
 function malou1() {
@@ -69,6 +75,9 @@ function malou1() {
   div1.style.background = 'rgb(36, 36, 48)';
   div3.style.background = 'black';
   div2.style.background = 'black';
+  spanearn.style.color = '#ababab';
+  spanhome.style.color = 'white';
+  spanfriend.style.color = '#ababab';
 }
 
 function malou3() {
@@ -78,6 +87,9 @@ function malou3() {
   div1.style.background = 'black';
   div3.style.background = 'rgb(36, 36, 48)';
   div2.style.background = 'black';
+  spanearn.style.color = '#ababab';
+  spanhome.style.color = '#ababab';
+  spanfriend.style.color = 'white';
 }
 
 let h3 = document.getElementById('h3');

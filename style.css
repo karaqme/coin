@@ -29,8 +29,18 @@ body {
   width: 30px; /* см. ширину, подходящую для вашего случая */
   margin: -10px;
 }
-
-
+.spanhome {
+  color: white;
+  display: block; /* make the span a block element */
+}
+.spanearn {
+  color: #ababab;
+  display: block; /* make the span a block element */
+}
+.spanfriend {
+  color: #ababab;
+  display: block; /* make the span a block element */
+}
 .header {
   background-color: #000000; /* adjust the background color to your liking */
   padding: 5px; /* add some padding for better looks */
@@ -42,11 +52,6 @@ body {
   bottom: 0; /* set the footer to the bottom of the page */
   left: 0; /* position it at the left edge of the page */
   right: 0; /* position it at the right edge of the page */
-}
-
-.header span {
-  display: block; /* make the span a block element */
-  color: #ffffff; /* adjust the text color to your liking */
 }
 .flex-container {
   display: flex;
@@ -60,7 +65,6 @@ body {
   flex-basis: 33.33%; /* divide the footer into three equal parts */
   border-radius: 50px;
   text-align: center;
-  display: flex; /* make the div a flex container */
   flex-direction: column; /* stack the icon and text vertically */
   align-items: center; /* center the icon and text horizontally */
   user-select: none;
@@ -70,13 +74,13 @@ body {
   background: rgb(36, 36, 48);
 }
 .icon1 {
-  font-size: 2.44em;
+  font-size: 1.5em;
   color: rgb(250, 240, 240);
   margin: auto;
   user-select: none;
 }
 .icon2 {
-  font-size: 2.44em;
+  font-size: 1.5em;
   color: white;
   user-select: none;
   margin: auto;
@@ -84,7 +88,7 @@ body {
 }
 .icon3 {
   margin-top: 50px;
-  font-size: 2.44em;
+  font-size: 1.5em;
   color: rgb(235, 235, 235);
   user-select: none;
   margin: auto;
