@@ -98,3 +98,8 @@ function myr2() {
   balance += 5000;
   updateBalance(); // Update the balance display
 }
+
+let bonusxd = document.getElementById('bonusxd')
+function bonus() {
+  bonusxd.style.display = 'none';
+}
