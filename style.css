@@ -1,30 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Jura|Rajdhani');
-
 body {
   background-color: rgb(0, 0, 0);
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-
-.star{display: block; background-color: #fff; position: absolute; border-radius: 100%; animation-timing-function: linear;animation-iteration-count: infinite;}
-
-@keyframes move_right {
-   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
-}
-
-@keyframes move_left {
-   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
-    to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
-}
-
-/* the intro panel */
-.intro{color:#63baf7; margin: 1em; font-family: Jura; font-size: 11pt}
-.intro .customization-panel{display: flex;flex-wrap: wrap;}
-.intro .customization-title{flex-basis : 100%;padding: 10px 0; font-size: 14pt; text-shadow: 0 0 .3em #63baf7; color: #fff;}
-.intro .customization-js{margin-right: 2em;}
-
 .xd {
   text-align: center;
   margin-bottom: 20px;
@@ -190,7 +169,6 @@ body {
   -moz-box-shadow: -12px -5px 84px 45px rgba(49, 77, 99, 0.93);
   box-shadow: -12px -5px 84px 45px rgba(49, 77, 99, 0.93);
   z-index: 3;
-  overflow: hidden;
 }
 .monetaxd {
   font-family: Noto Sans, sans-serif;
